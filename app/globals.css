@@ -1,0 +1,199 @@
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  @layer base {
+    :root {
+      --background: 0 0% 100%;
+      --foreground: 222.2 84% 4.9%;
+      /* --card: 0 0% 100%;
+      --card-foreground: 222.2 84% 4.9%; */
+        --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+      --popover: 0 0% 100%;
+      --popover-foreground: 222.2 84% 4.9%;
+      --primary: 221.2 83.2% 53.3%;
+      --primary-foreground: 210 40% 98%;
+      --secondary: 210 40% 96.1%;
+      --secondary-foreground: 222.2 47.4% 11.2%;
+      --muted: 210 40% 96.1%;
+      --muted-foreground: 215.4 16.3% 46.9%;
+      --accent: 210 40% 96.1%;
+      --accent-foreground: 222.2 47.4% 11.2%;
+      --destructive: 0 84.2% 60.2%;
+      --destructive-foreground: 210 40% 98%;
+      --border: 214.3 31.8% 91.4%;
+      --input: 214.3 31.8% 91.4%;
+      --ring: 221.2 83.2% 53.3%;
+      --radius: 0.5rem;
+    }
+   
+    .dark {
+      --background: 240 10% 3.9%;
+      --foreground: 0 0% 98%;
+      --card: 222.2 84% 4.9%;
+      --card-foreground: 210 40% 98%;
+      /* --card: 240 10% 3.9%;
+      --card-foreground: 0 0% 98%; */
+      --popover: 222.2 84% 4.9%;
+      --popover-foreground: 210 40% 98%;
+      --primary: 217.2 91.2% 59.8%;
+      --primary-foreground: 222.2 47.4% 11.2%;
+      --secondary: 217.2 32.6% 17.5%;
+      --secondary-foreground: 210 40% 98%;
+      --muted: 217.2 32.6% 17.5%;
+      --muted-foreground: 215 20.2% 65.1%;
+      --accent: 217.2 32.6% 17.5%;
+      --accent-foreground: 210 40% 98%;
+      --destructive: 0 62.8% 30.6%;
+      --destructive-foreground: 210 40% 98%;
+      --border: 217.2 32.6% 17.5%;
+      --input: 217.2 32.6% 17.5%;
+      --ring: 224.3 76.3% 48%;
+    }
+  }
+  
+
+  @layer base {
+    * {
+      @apply border-border;
+    }
+    body {
+      @apply bg-background text-foreground;
+    }
+    path {
+      stroke-dasharray: 15;
+    }
+  }
+
+  .root {
+    @apply flex min-h-screen w-full flex-row ;
+  }
+  
+  .root-container {
+    @apply flex-1 overflow-auto pb-2
+  }
+  
+  /* ========================================== TAILWIND STYLES */
+  @layer utilities {
+
+     /* ===== UTILITIES */
+    .wrapper {
+      @apply  max-w-7xl  p-16-regular;
+    }
+
+    .gradient-text {
+      @apply bg-purple-gradient bg-cover bg-clip-text text-transparent;
+    }
+
+    /* ===== ALIGNMENTS */
+    .flex-center {
+      @apply flex justify-center items-center;
+    }
+
+    .flex-between {
+      @apply flex justify-between items-center;
+    }
+
+    /* ===== TYPOGRAPHY */
+    /* 44 */
+    .h1-semibold {
+      @apply text-[36px] font-semibold sm:text-[44px] leading-[120%] sm:leading-[56px];
+    }
+
+    /* 36 */
+    .h2-bold {
+      @apply text-[30px] font-bold md:text-[36px] leading-[110%];
+    }
+
+    /* 30 */
+    .h3-bold {
+      @apply font-bold text-[30px] leading-[140%];
+    }
+
+    /* 24 */
+    .p-24-bold {
+      @apply font-bold text-[24px] leading-[120%];
+    }
+
+    /* 20 */
+    .p-20-semibold {
+      @apply font-semibold text-[20px] leading-[140%];
+    }
+
+    .p-20-regular {
+      @apply font-normal text-[20px] leading-[140%];
+    }
+
+    /* 18 */
+    .p-18-semibold {
+      @apply font-semibold text-[18px] leading-[140%];
+    }
+
+    /* 16 */
+    .p-16-semibold {
+      @apply font-semibold text-[16px] leading-[140%];
+    }
+
+    .p-16-medium {
+      @apply font-medium text-[16px] leading-[140%];
+    }
+
+    .p-16-regular {
+      @apply font-normal text-[16px] leading-[140%];
+    }
+
+    /* 14 */
+    .p-14-medium {
+      @apply font-medium text-[14px] leading-[120%];
+    }
+
+    /* 10 */
+    .p-10-medium {
+      @apply font-medium text-[10px] leading-[140%];
+    }
+
+      /* =====  SHADCN OVERRIDES */
+    .button {
+      @apply py-4 px-6 flex-center gap-3 rounded-full p-16-semibold focus-visible:ring-offset-0 focus-visible:ring-transparent !important;
+    }
+
+    .dropdown-content {
+      @apply mr-4 !important;
+    }
+
+      /* Sidebar Component */
+    .sidebar {
+      @apply h-screen w-72 p-5 border-r;
+    }
+
+    .sidebar-logo {
+      @apply flex items-center gap-2 ;
+    }
+
+    .sidebar-nav {
+      @apply h-full flex-col justify-between;
+    }
+
+    .sidebar-nav_elements {
+      @apply  w-full flex-col items-start gap-2 ;
+    }
+
+    .sidebar-nav_element {
+      @apply flex-center p-16-semibold w-full whitespace-nowrap rounded-full bg-cover  transition-all hover:bg-purple-100 hover:shadow-inner;
+    }
+
+    .sidebar-link {
+      @apply p-16-semibold flex size-full gap-4 p-4;
+    }
+  /* Navbar Component */
+    .navbar {
+      @apply  border-b;
+    }
+    .navbar-top {
+      @apply flex h-14 justify-between items-center p-5;
+    }
+    .navbar-right {
+      @apply flex h-14 w-40 justify-end items-center gap-2  ;
+    }
+  }  

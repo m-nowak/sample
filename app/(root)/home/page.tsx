@@ -14,11 +14,23 @@ import React from 'react'
 const Page = () => {
     return (
         <>
+            <div className="p-8 flex justify-start w-full gap-8">
 
-            <div>
-                <Plane />
+                <CertificationsCard />
+                <IdeasCard />
+                <PointsCard />
+
             </div>
+            <div className="px-8 flex justify-start w-full gap-8 ">
+                < HealthSafetyCard />
+                <QualityCard />
+                <ProductionCard />
+            </div>
+            <div className="p-8 flex justify-start w-full gap-8 ">
+                <IssuesCard />
+                <TransactionsCard />
 
+            </div>
         </>
     )
 }
